@@ -1,3 +1,5 @@
+import { formatCurrency, formatNumber, getColorText } from "../utils";
+
 export const useColumns: () => any = () => {
   return [
     {
@@ -9,8 +11,8 @@ export const useColumns: () => any = () => {
       title: "1Hour change",
       dataIndex: "percent_change_1h",
       key: "percent_change_1h",
-      render: (text: String) => (
-        <span>
+      render: (text: string) => (
+        <span className={getColorText(text)}>
           {text}
           <b>%</b>
         </span>
@@ -20,8 +22,8 @@ export const useColumns: () => any = () => {
       title: "24Hour Change",
       dataIndex: "percent_change_24h",
       key: "percent_change_24h",
-      render: (text: String) => (
-        <span>
+      render: (text: string) => (
+        <span className={getColorText(text)}>
           {text}
           <b>%</b>
         </span>
@@ -31,8 +33,8 @@ export const useColumns: () => any = () => {
       title: "7Day Change",
       dataIndex: "percent_change_7d",
       key: "percent_change_7d",
-      render: (text: String) => (
-        <span>
+      render: (text: string) => (
+        <span className={getColorText(text)}>
           {text}
           <b>%</b>
         </span>
@@ -42,18 +44,13 @@ export const useColumns: () => any = () => {
       title: "Price in USD",
       dataIndex: "price_usd",
       key: "price_usd",
-      render: (text: String) => (
-        <span>
-          {text}
-          <b>$</b>
-        </span>
-      ),
+      render: (text: string) => <span>{formatCurrency(text)}</span>,
     },
     {
       title: "Price in BTC",
       dataIndex: "price_btc",
       key: "price_btc",
-      render: (text: String) => (
+      render: (text: string) => (
         <span>
           {text}
           <b>BTC</b>
@@ -74,27 +71,31 @@ export const useColumns: () => any = () => {
       title: "Current Supply",
       dataIndex: "csupply",
       key: "csupply",
+      render: (text: string) => <span>{formatNumber(text)}</span>,
     },
     {
       title: "Total Supply",
       dataIndex: "tsupply",
       key: "tsupply",
+      render: (text: string) => <span>{formatNumber(text)}</span>,
     },
     {
       title: "Volume 24Hr",
       dataIndex: "volume24",
       key: "volume24",
+      render: (text: string) => <span>{formatNumber(text)}</span>,
     },
     {
       title: "Volume 24Hr A",
       dataIndex: "volume24a",
       key: "volume24a",
+      render: (text: string) => <span>{formatNumber(text)}</span>,
     },
     {
       title: "Market Cap(USD)",
       dataIndex: "market_cap_usd",
       key: "market_cap_usd",
-      render: (text: String) => <span>{text}$</span>,
+      render: (text: string) => <span>{formatCurrency(text)}</span>,
     },
   ];
 };
