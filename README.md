@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Coin Dash
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dashboard for all crypto coins available in the market
 
-## Available Scripts
+<!-- ## Description
 
-In the project directory, you can run:
+Finding the right talent that fits the role that a company is seeking for has always been a challenge. Recruiters have to go through multiple profiles before finding and approaching a potential candidate. Identifying a candidate as a potential fit for the role requires the recruiter to look at different profiles of the candidate in different platforms.
+GeekInsider is a platform that helps to connect companies with the right talent in the IT sector. It aims to provide the recruiters, representing the companies, with a pool of talent along with maximum insights collected from multiple platforms.
+It is also a platform where IT professionals can showcase their work, search for the job that suits them best and apply for it.  -->
 
-### `npm start`
+## Getting Started
+* [URL](https://saxenaa218.github.io/coin-dash)
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- ## Description
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [PRD](https://drive.google.com/file/d/1KFyDS5alj3-eoNI8aNCxppcBr2byIDUl/view?usp=sharing)
+* [HLD](https://drive.google.com/file/d/1cwNigCjESyGc8JDVfxXS2RvVDf0UvXO3/view?usp=sharing)
+* [Mockup](https://drive.google.com/file/d/1s7Szy7HjG09NQYCv3CSvPnCNsvrqNRMT/view?usp=sharing) -->
 
-### `npm test`
+### Installing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Fork this repo.
+  [repo](https://github.com/Saxenaa218/coin-dash)
+* Clone the repo using
+  ```
+    git clone https://github.com/Saxenaa218/coin-dash
+  ```
+* Change directory
+  ```
+    cd coin-dash
+  ```
+* Install dependencies
+  ```
+    npm install
+  ```
+* Run app
+  ```
+    npm start
+  ```
 
-### `npm run build`
+## Authors
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributors names and contact info
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Abhishek Saxena  
+[@saxenaa218](https://github.com/saxenaa218)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [Antd](https://github.com/ant-design/ant-design)
+* [Coinlore API](https://www.coinlore.com/cryptocurrency-data-api)
