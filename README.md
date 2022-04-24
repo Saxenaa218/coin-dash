@@ -10,7 +10,6 @@ It is also a platform where IT professionals can showcase their work, search for
 
 ## Getting Started
 * [URL](https://saxenaa218.github.io/coin-dash)
-    ```
 
 <!-- ## Description
 
