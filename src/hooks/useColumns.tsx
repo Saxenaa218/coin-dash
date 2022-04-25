@@ -1,4 +1,10 @@
+import { Button } from "antd";
+import { getOtherExchangeData } from "../redux";
 import { formatCurrency, formatNumber, getColorText } from "../utils";
+
+const handleOtherExchangeClick = (id: string) => {
+  getOtherExchangeData(id);
+};
 
 export const useColumns: () => any = () => {
   return [
@@ -96,6 +102,21 @@ export const useColumns: () => any = () => {
       dataIndex: "market_cap_usd",
       key: "market_cap_usd",
       render: (text: string) => <span>{formatCurrency(text)}</span>,
+    },
+    {
+      title: "More",
+      dataIndex: "id",
+      key: "id",
+      render: (text: string, record: object) => (
+        <Button
+          type="primary"
+          size="small"
+          title="Prices on other exchanges"
+          onClick={() => handleOtherExchangeClick(text)}
+        >
+          prices
+        </Button>
+      ),
     },
   ];
 };

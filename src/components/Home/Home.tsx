@@ -1,30 +1,19 @@
 import React from "react";
-import { Input } from "antd";
+import { Affix, Input } from "antd";
 import CoinTable from "../../components/CoinTable";
-import { store } from "../../redux";
-import { debounce, SET_COINS } from "../../utils";
+import { setQuery } from "../../redux";
+import { debounce } from "../../utils";
 import "./Home.css";
 
 const Home: React.FC = () => {
   const onChange = (e: any) => {
-    const query = e.target.value;
-    const coins = [...store.getState().coins];
-    if (!query && query === "") {
-      store.dispatch({ type: SET_COINS, payload: coins });
-    } else {
-      store.dispatch({
-        type: SET_COINS,
-        payload: coins.filter(
-          (coin: any) =>
-            coin.name.toLowerCase().includes(query.toLowerCase()) ||
-            coin.symbol.toLowerCase().includes(query.toLowerCase())
-        ),
-      });
-    }
+    setQuery(e.target.value);
   };
   return (
     <div className="parent">
-      <header className="header">Coin Dash</header>
+      <Affix offsetTop={0}>
+        <header className="header">Coin Dash</header>
+      </Affix>
       <section className="search">
         <Input
           placeholder="Search coins and tokens"
