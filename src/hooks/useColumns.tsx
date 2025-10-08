@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button } from "../components/ui/button";
 import { getOtherExchangeData } from "../redux";
 import { formatCurrency, formatNumber, getColorText } from "../utils";
 
@@ -109,8 +109,8 @@ export const useColumns: () => any = () => {
       key: "id",
       render: (text: string, record: object) => (
         <Button
-          type="primary"
-          size="small"
+          variant="default"
+          size="sm"
           title="Prices on other exchanges"
           onClick={() => handleOtherExchangeClick(text)}
         >
